@@ -1,0 +1,22 @@
+<h1>Microsoft Teams</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Create Date</th>
+            <th scope="col">Sender</th>
+            <th scope="col">Preview</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each chatevents}}
+        <tr>
+          
+            <td>{{this.from.user.displayName}}</td>
+            <td>{{this.subject}}</td>
+            <td>{{this.body.content}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<!-- </LayoutSnippet> -->

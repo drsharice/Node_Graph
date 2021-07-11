@@ -15,6 +15,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 var calendarRouter = require('./routes/calendar');
+var outlookRouter = require('./routes/outlook');
+var teamsRouter = require('./routes/teams');
+
 
 var app = express();
 
@@ -107,6 +110,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/calendar', calendarRouter);
+app.use('/outlook', outlookRouter);
+app.use('/teams', teamsRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

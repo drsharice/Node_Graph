@@ -34,7 +34,8 @@ module.exports = {
       .get();
 
     return events;
-  },
+    },
+ 
   // </GetCalendarViewSnippet>
 
   // <CreateEventSnippet>

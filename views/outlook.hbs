@@ -1,0 +1,27 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+<!-- <LayoutSnippet> -->
+<h1>Outlook</h1>
+<a href="/outlook/new" class="btn btn-info" role="button">New Mail</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Received Date</th>
+            <th scope="col">Sender</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Preview</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each mailevents}}
+        <tr>
+            <td>{{this.receivedDateTime}}</td>
+            <td>{{this.sender.emailAddress.name}}</td>
+            <td>{{this.subject}}</td>
+            <td>{{this.bodyPreview}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<!-- </LayoutSnippet> -->
