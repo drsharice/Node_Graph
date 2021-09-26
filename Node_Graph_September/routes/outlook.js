@@ -139,16 +139,4 @@ router.post('/new', [
 );
 
 
-
-async function (userId, msalClient) {
-    // Look up the user's account in the cache
-    try {
-        const accounts = await msalClient
-            .getTokenCache()
-            .getAllAccounts();
-    } catch (err) {
-        console.log(JSON.stringify(err, Object.getOwnPropertyNames(err)));
-    }
-}
-
 module.exports = router;
